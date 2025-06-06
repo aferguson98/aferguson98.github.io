@@ -1,0 +1,376 @@
+/*
+    core.css
+
+    CONTAINS
+    --------
+    Core CSS elements for portfolio site
+
+    AUTHOR
+    ------
+    Alexander Ferguson
+
+    LICENCE
+    -------
+    Copyright 2021. All rights reserved
+
+ */
+
+@import url('../fonts/Metropolis/metropolis.css');
+@import url('../fonts/Space_Grotesk/space_grotesk.css');
+
+*{
+    color: #282828;
+    font-family: "Space Grotesk", Arial, Helvitica, sans-serif;
+    font-weight: 400;
+}
+
+#attributions{
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.attributions-modal{
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    height: fit-content(100%);
+    left: 50%;
+    max-height: 75vh;
+    max-width: 750px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    z-index: 4;
+}
+
+.attributions-modal-bg{
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.attributions-modal #close-btn{
+    background: #FFFFFF;
+    border-radius: 2px;
+    color: #FF9800;
+    cursor: pointer;
+    float: right;
+    padding: 5px;
+    transition: background ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.attributions-modal #close-btn:hover{
+    background: #FF9800;
+    color: #FFFFFF;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background: #FFFFFF;
+    border-top: 1px solid #282828;
+    flex-shrink: 0;
+    margin: 35px 0 0;
+    width: 100%;
+}
+
+footer .container{
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+footer .container .flex-container{
+    align-items: center;
+    display: flex;
+    justify-items: stretch;
+}
+
+footer #footer-icon{
+    display: block;
+    height: 50px;
+    margin: -35px auto 0 auto;
+    width: 50px;
+}
+
+footer .social-link-item{
+    height: 20px;
+    width: 20px;
+    margin: 10px 5px;
+}
+
+footer .social-link-item img{
+    filter: invert(0%);
+    transition: filter ease-in-out 0.2s;
+}
+
+footer .social-link-item img:active, footer .social-link-item img:hover{
+    filter: invert(50%);
+}
+
+html, body{
+    border: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    left: 0;
+    padding: 10px;
+    top: 0;
+    width: calc(100% - 20px);
+}
+
+header.full{
+    background: #FFFFFF;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+}
+
+header.full img{
+    height: 100px;
+}
+
+header.micro{
+    background: #282828;
+    height: 40px;
+    position: fixed;
+    z-index: 1;
+}
+
+header.micro .container{
+    height: 40px;
+}
+
+header.micro .social-link-item{
+    height: 25px;
+    width: 25px;
+    margin: 10px 5px;
+}
+
+header.micro .social-link-item img{
+    filter: invert(100%);
+    transition: filter ease-in-out 0.2s;
+}
+
+header.micro .social-link-item img:active, header.micro .social-link-item img:hover{
+    filter: invert(70%);
+}
+
+#header_main_right{
+    background-image: url("../images/h1_bg_right.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header .container{
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+}
+
+#logo-micro{
+    height: 40px;
+}
+
+main{
+    flex: 1 0 auto;
+    margin: 120px auto 0 auto;
+    max-width: 1024px;
+    position: relative;
+    width: 100%;
+}
+
+main .container{
+    margin: 0;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+main h1, h2, h3, h4{
+    font-weight: 800;
+}
+
+main .span-bg{
+    color: #FFFFFF;
+    background-color: #FF9800;
+    box-decoration-break: clone;
+    font-weight: 700;
+    line-height: 2.1;
+    padding: 10px;
+    -webkit-box-decoration-break: clone;
+}
+
+section{
+    display: block;
+    margin: 20px auto;
+}
+
+/* Adapted from https://codepen.io/trys/pen/vjRXLW/ */
+
+.section-header {
+    align-items: center;
+    display: flex;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.section-header:before,
+.section-header:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.section-header:after {
+    margin: 0 0 0 20px;
+}
+
+/* End of adaptation */
+
+.social-links{
+    align-items: center;
+    display: flex;
+    margin: 0 0 0 auto;
+    text-align: right;
+}
+
+@media(min-width: 750px) {
+    .two-width-grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 25px 0;
+    }
+
+    .two-width-grid:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .two-width-grid .img {
+        border-radius: 50%;
+        height: 250px;
+        margin: 0 25px;
+        object-fit: cover;
+        width: 250px;
+    }
+
+    .two-width-grid .text {
+        width: calc(100% - 300px)
+    }
+}
+
+@media(max-width: 750px) {
+    .two-width-grid {
+        margin: 25px 0;
+    }
+
+    .two-width-grid .img {
+        border-radius: 50%;
+        display: block;
+        height: 90vw;
+        margin: 10px auto;
+        max-height: 250px;
+        max-width: 250px;
+        object-fit: cover;
+        width: 90vw;
+    }
+
+    .two-width-grid .text {
+        display: block;
+    }
+
+    .two-width-grid .text h2, .two-width-grid .text h3{
+        text-align: center;
+    }
+
+    #word-mark{
+        display: none;
+    }
+}
+
+.two-width-grid .text h3{
+    vertical-align: top;
+}
+
+.two-width-grid .text .experience-date{
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+}
+
+.two-width-grid .text .experience-date{
+    font-family: "Space Mono", monospace;
+}
+
+#word-mark{
+    color: #FFFFFF;
+    font-family: "Metropolis", Arial, Helvitica, sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 0 8px;
+    text-transform: uppercase;
+}
+
+.gallery-btn{
+    background: #FFFFFF;
+    border-radius: 2px;
+    color: #FF9800;
+    cursor: pointer;
+    float: right;
+    margin: 0 5px;
+    padding: 5px;
+    transition: background ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.gallery-btn:hover{
+    background: #FF9800;
+    color: #FFFFFF;
+}
+
+.link-btn{
+    background: #FFFFFF;
+    border-radius: 2px;
+    color: #1b9df5;
+    cursor: pointer;
+    float: right;
+    margin: 0 5px;
+    padding: 5px;
+    text-decoration: none;
+    transition: background ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.link-btn.disabled{
+    background: #EDEDED;
+    color: #737373;
+    cursor: not-allowed;
+}
+
+.link-btn:hover{
+    background: #1b9df5;
+    color: #FFFFFF;
+}
+
+.link-btn.disabled:hover{
+    background: #EDEDED;
+    color: #EDEDED;
+}
