@@ -1,3 +1,6 @@
+@import url('fonts/Metropolis/metropolis.css');
+@import url('fonts/Space_Grotesk/space_grotesk.css');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -6,10 +9,6 @@ html, body {
   color: white;
   overflow: hidden;
 }
-
-@import url('../fonts/Metropolis/metropolis.css');
-@import url('../fonts/Space_Grotesk/space_grotesk.css');
-@import url('https://fonts.googleapis.com/css2?family=Space Grotesk:wght@400;600&display=swap');
 
 .background {
   position: fixed;
