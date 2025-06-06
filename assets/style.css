@@ -1,5 +1,6 @@
 @import url('fonts/Metropolis/metropolis.css');
 @import url('fonts/Space_Grotesk/space_grotesk.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 html, body {
   margin: 0;
